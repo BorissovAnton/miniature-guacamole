@@ -4,40 +4,31 @@ This project presents a protocol for implementing the **Quantum Random Access Me
 
 ## Visual Overview
 
-```code
+```mermaid
 flowchart TD
-    A0["QRAM Operation
-"]
-    A1["Fault-tolerant Quantum Computation (FTQC)
-"]
-    A2["Physical QRAM Device
-"]
-    A3["Logical QRAM Operation
-"]
-    A4["QRAM Resource State
-"]
-    A5["Distillation (Purity Amplification)
-"]
-    A6["Gate Teleportation
-"]
-    A7["Classical Update Rule (UR)
-"]
-    A8["Clifford Hierarchy
-"]
-    A9["Encoding and Quantum Error Correction (QEC)
-"]
-    A2 -- "Performs" --> A0
-    A0 -- "Implemented as" --> A3
-    A3 -- "Part of" --> A1
-    A1 -- "Relies on" --> A9
-    A3 -- "Uses teleportation" --> A6
-    A6 -- "Consumes state" --> A4
-    A2 -- "Prepares noisy state" --> A4
-    A9 -- "Encodes state" --> A4
-    A4 -- "Purified by" --> A5
-    A6 -- "Measurement drives" --> A7
-    A7 -- "Updates data for" --> A2
-    A8 -- "Classifies complexity" --> A3
+    A0["QRAM Operation"]
+    A1["Fault-tolerant Quantum Computation (FTQC)"]
+    A2["Physical QRAM Device"]
+    A3["Logical QRAM Operation"]
+    A4["QRAM Resource State"]
+    A5["Distillation (Purity Amplification)"]
+    A6["Gate Teleportation"]
+    A7["Classical Update Rule (UR)"]
+    A8["Clifford Hierarchy"]
+    A9["Encoding and Quantum Error Correction (QEC)"]
+
+    A2 -->|"Performs"| A0
+    A0 -->|"Implemented as"| A3
+    A3 -->|"Part of"| A1
+    A1 -->|"Relies on"| A9
+    A3 -->|"Uses teleportation"| A6
+    A6 -->|"Consumes state"| A4
+    A2 -->|"Prepares noisy state"| A4
+    A9 -->|"Encodes state"| A4
+    A4 -->|"Purified by"| A5
+    A6 -->|"Measurement drives"| A7
+    A7 -->|"Updates data for"| A2
+    A8 -->|"Classifies complexity"| A3
 ```
 
 ## Chapters
